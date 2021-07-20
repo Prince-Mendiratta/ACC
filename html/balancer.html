@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="fa-events-icons-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+   <!-- HTML Defaults Broweser -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/img/chemistry calculator.ico" type="icon">
+    <!-- Project Style Sheet -->
+    <link rel="stylesheet" href="../css/balancer_style.css">
+    <!-- Meta Title, Description and Canonical URL Starts --->
+    <title>Chemical Equation Balancer</title>
+    <!-- Meta Title, Description and Canonical URL ENDS --->
+    
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-expand-sm">
+        <a class="navbar-brand" href="../index.html">ACC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./periodic.html">Periodic Table</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+<div class="container" style="height: auto !important;">
+        <div class="card c1">
+            <div class="card-header">
+                <h1 class="h1">Chemical Equation Balancer</h1>
+            </div>
+            <div class="card-body">
+     </div>           
+  <div class="d-flex justify-content-center">  
+    <form onsubmit="event.preventDefault(); doBalance();">
+      <strong>Enter the unbalanced Chemical Equation </strong>
+                
+        <div class="form-row align-items-center">
+           <div class="col-auto">
+                <div class="input-group mb-2 mt-3">
+                    <div class="input-group-prepend">
+                </div>
+                <input type="text" id="inputFormula" autocomplete="off" placeholder="Enter the unbalanced chemical formula here" class="form-control" name="eqwt">
+                </div>
+                <div class="input-group mb-2 mt-3">
+                   
+                  <div class="input-group-prepend">
+              </div>
+              <input type="text" readonly="" class="form-control" name="result" id="balanced" placeholder="Balanced Equation">
+              <code hidden id="codeOutput">&#xA0;</code>
+            </div>
+                  </div>
+                    </div>
+    <div class=" center col mt-2 ">
+			&nbsp;&nbsp;&nbsp;&nbsp;	
+      <input id="botton1" class="btn btn-danger mb-2" type="button" onclick="myFunction()" value="Clear">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button type="submit" class="btn btn-primary mb-2">Calculate</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" class="btn btn-secondary mb-2" onclick="doRandom();">Random</button>
+    </div>
+  </form>
+</div>
+    <ul class="messages">
+        
+    </ul>
+</div>
+</div>
+
+       
+<script>
+	function myFunction() {
+		document.getElementsByName("eqwt")[0].value="";
+    document.getElementsByName("result")[0].value="";
+	}
+</script>
+
+<style>
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 11%;
+    background-color: #009FE8;
+    color: white;
+    text-align: center;
+  }
+  </style>
+  
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+</body>
+<script src="../js/chemical-equation-balancer.js"></script>
+</html>

@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("../assets/img/Periodic\ Table\ BG.png");
+  font-family: Open Sans;
+}
+
+main, .info {
+  padding: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.5rem;
+}
+main h1 {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  grid-row: 1/span 2;
+  grid-column: 4/span 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #59656F;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border-width: 5px;
+}
+main abbr {
+  width: 2.5rem;
+  height: 2.5rem;
+  grid-row: 1;
+  grid-column: 2;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid white;
+  box-shadow: 0 9px 5px -4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  transition: 0.1s all ease;
+  cursor: default;
+  background: #59656F;
+  color: white;
+}
+main abbr:hover, main abbr.focus {
+  transform: scale(1.25);
+  box-shadow: 0 19px 15px rgba(0, 0, 0, 0.7);
+}
+main abbr.metal {
+  border-color: #C2CC8B;
+  border-radius: 5px;
+}
+main abbr.metalloid {
+  border-color: #9CC4B2;
+  border-radius: 5px;
+}
+main abbr.transition {
+  border-color: #E1B07E;
+  border-radius: 5px;
+}
+main abbr.noble {
+  border-color: #ECDCB0;
+  border-radius: 5px;
+}
+main abbr.nonmetal {
+  border-color: #7CE577;
+  border-radius: 5px;
+}
+main abbr.alkali {
+  border-color: #A0CCDA;
+  border-radius: 5px;
+}
+main abbr.alkaline {
+  border-color: #B9E28C;
+  border-radius: 5px;
+}
+main abbr.lanthanide {
+  border-color: #CC8B8C;
+  border-radius: 5px;
+}
+main abbr.actinide {
+  border-color: #F1C8DB;
+  border-radius: 5px;
+}
+
+.info {
+  margin-top: 1rem;
+  width: 55rem;
+  height: auto;
+  display: grid;
+  grid-template-rows: 2rem auto;
+  grid-template-columns: 8fr 5fr;
+  grid-column-gap: 2rem;
+  background: #59656F;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-weight: 300;
+  transition: 0.5s height ease-in-out;
+  border-radius: 10px;
+}
+.info p {
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
+  line-height: 1.3;
+  text-align: justify;
+  
+}
+.info ul {
+  grid-row: 2/span 1;
+  grid-column: 2/span 1;
+  line-height: 1.3;
+  list-style: none;
+}
+.info ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.info ul li span {
+  text-align: right;
+  min-width: 120px;
+}
+.info ul li span.bold {
+  font-weight: bold;
+  text-align: left;
+}
+.info a:link,
+.info a:visited,
+.info a:hover,
+.info a:active {
+  color: inherit;
+  text-decoration: none;
+}

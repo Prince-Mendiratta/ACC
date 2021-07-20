@@ -1,0 +1,469 @@
+/* Comment Categories & Name - Search for Categories Like Input, Navbar, Media, Footer, Table*/
+
+/* Font Family Entire Project #Valpy */
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+/*Paragraph  #Valpy*/
+input{
+  text-align:right;
+}
+input[type=text]{
+  width: 100%;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+p {
+  font-size: 1.1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0.5rem!important;
+}
+pre{
+  font-size: 1.1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0.5rem!important;
+}
+
+/*Headers #Valpy*/
+.h1, h1 {
+  font-size: 1.8rem!important;
+}
+
+.h2, h2 {
+  font-size: 1.6rem!important;
+}
+
+.h3, h3 {
+  font-size: 1.5rem!important;
+}
+
+.h1, h1, .h2, h2, .h3, h3,.h4, h4,.h5, h5,.h6, h6{
+    padding-left: 0px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0.25rem;
+}
+
+/* Media Classes for Navbar, Footer and Home Page Heading  #Valpy*/
+/*DESKTOP*/
+@media screen and (min-width: 768px) {
+  #formula-list h3{
+    border: #009FE8;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: #009FE8;
+    padding: 6px!important;
+    color: #FFFFFF;
+    align-content: center;
+}
+#formula-list p{
+    line-height: 1.8!important;
+    font-size: 1.1rem;
+}
+#formula-list ul{
+  list-style:none;
+  margin:0 0 1.5em 0;
+  padding:0 !important;
+}
+#formula-list ul li{
+  position:relative;
+  list-style-type:none !important;
+  display:block !important;
+  font-size:17px;
+  line-height:1.5;
+  margin:0 !important;
+  padding:4px 0 4px 2em
+}
+.h1-home
+{
+    margin-top: 60px;
+    padding-top: 10px;
+    font-size: 2rem!important;
+}
+.navbar .navbar-brand {
+  color: #FFF;
+  font-size: 26px;
+  font-weight: 500;
+}
+.footer-h4{
+font-size: 25px;
+color: #FFF;
+padding-right: 15px;
+}
+.footer-h5{
+  font-size: 20px;
+  color: #FFF;
+  padding-right: 10px;
+  }
+.footer-text{
+  font-size: 20px;
+  color: #FFF;
+}
+.footertext a {
+  font-size: 20px !important;
+  padding-right: 20px !important;
+}
+.footertext a:hover{
+  color: #FFF!important;
+}
+.social{
+  padding-top: 5px !important;
+  padding-right: 15px;
+}
+.nav-link {
+  font-size: 20px;
+  margin: auto;
+  color: #FFF!important;
+  font-weight: 500;
+}
+.c1 {
+  margin-top:75px!important;
+}
+img {
+  max-width: 100% !important;
+  height:auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display:block !important;
+}
+.container{
+  background-color: #FDFDFD;
+}
+.card {
+  margin-bottom: 20px!important;
+}
+#balanced {
+  width: 600px;
+}
+}
+/*MOBILE*/
+@media screen and (max-width: 768px) {
+  #formula-list h3{
+    border: #009FE8;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: #009FE8;
+    padding: 5px!important;
+    color: #FFFFFF;
+    text-align: center;
+}
+#formula-list p{
+    line-height: 1.6!important;
+}
+#formula-list ul{
+  list-style:none;
+  margin:0 0 1.5em 0;
+  padding:0 !important
+}
+#formula-list ul li{
+  position:relative;
+  list-style-type:none !important;
+  display:block !important;
+  line-height:1.5;
+  margin:0 !important;
+  padding:4px 0 4px 2em;
+}
+  .h1-home
+  {
+      margin-top: 40px;
+      padding-top: 5px;
+      font-size: 1.5rem!important;
+  }
+  .navbar .navbar-brand {
+    color: #FFF;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.footertext a {
+    font-size: 16px !important;
+    padding-right: 45px !important;
+}
+.footertext a:hover{
+  color: #FFF!important;
+}
+.footer-h4{
+font-size: 16px;
+color: #FFF;
+padding-right: 8px;
+}
+.footer-text{
+font-size: 16px;
+color: #FFF;
+}
+.social{
+    padding-right:8px;
+}
+.footer-h5{
+    font-size: 16px;
+    color: #FFF;
+    padding-right: 4px;
+}
+.nav-link {
+        font-size: 16px;
+        margin: auto;
+        color: #FFF!important;
+        font-weight: 500;
+    }
+img {
+      max-width: 100% !important;
+      height:auto !important;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display:block !important;
+   }
+.c1 {
+    margin-top:50px!important;
+  }
+  .container{
+    background-color: #FDFDFD;
+    padding: 10px!important;
+  }
+  .card {
+    margin-bottom: 20px!important;
+  }
+  .input-group-text, #balanced, .input-group-prepend {
+    width: 100%;
+  }
+  .row {
+    margin: 0px!important;
+}
+}
+/*Navbar Valpy*/
+.navbar {
+  background-color:#009FE8;
+  padding: 0rem 0.35rem!important;
+}
+
+.navbar nav ul, .nav-item {
+  list-style-type: none!important;
+ }
+
+.menu-bar .navbar-toggler {
+  padding-right: 20px;
+  outline: none!important;
+  border: none!important;
+  color: #FFF !important;
+}
+
+.navbar .fa {
+  color: #FFF!important;
+  font-size: 20px;
+}
+
+/* Navbar Hover Color - Not Change #Valpy */
+.navbar .navbar-brand:hover {
+  color: #FFF;
+}
+
+/* Textarea for Long Addition #Praharsha */
+textarea.longadd{
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align:right;
+  align-content:right;
+  box-sizing: border-box;
+  padding: 16px 32px;
+  font-size: 100%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* LCMG and GCF Tables and Marking #Sampad */
+
+#lcmtable {
+border-collapse: collapse;
+border-style: hidden;
+margin-top: 0;
+}
+#lcmtable td {
+border: 2px solid black;
+padding: 5px;
+}
+mark{
+  background: yellow;
+}
+textarea {
+overflow: auto
+}
+
+/* Input Group Gap #Sampad */
+#balanced {
+  margin-top:5px;
+}
+.input-group-text{
+  margin-top:5px;
+}
+.btn-primary{
+  margin-top:5px;
+}
+/* Long Addition Tables Data #Praharsha */
+table.longadd {
+  border-spacing: 0;
+  margin-bottom: 1em
+  }
+td.longadddata,
+th.longadddata {
+text-align: right;
+border-left: 1px solid black;
+border-right: 1px solid black;
+padding: 10px !important;
+}
+th.longadddata {
+background-color: #e2f0c6
+}
+tr.longadditioncarry{
+  font-weight: bold;
+  font-style: italic;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  color:red
+}
+tr.longaddition {
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-top: 1px solid black;
+border-bottom: 1px solid black
+}
+tr:nth-child(odd).longadditiondetail {
+background-color:  #899ea5;
+border-bottom: 1px solid black
+}
+tr:nth-child(even).longadditiondetail {
+  background-color:  #899ea5;
+  border-bottom: 1px solid black
+  }
+table {
+border-collapse: collapse;
+border-spacing: 0;
+margin-bottom: 1em
+}
+.cd-top,
+.center,
+footer {
+text-align: center
+}
+th {
+background-color: #e2f0c6;
+padding: 10px;
+align-content: center;
+}
+td {
+  padding: 10px;
+  font-weight: 400;
+}
+tr {
+border-bottom: 1px solid #ddd
+}
+tr:nth-child(odd) {
+background-color: #f7f7f7
+}
+
+/*Ul #Valpy*/
+ul, .ul-format {
+  list-style-type: square !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/*Footer-Styling #Valpy*/
+.footer a{
+  color:white;
+  font-size: 1rem;
+}
+
+.clickable:hover {
+    color: white;
+  }
+
+.footer {
+      background-color: #009FE8;
+      flex-shrink: 0;
+      color: white;
+      width: 100% !important;
+  }
+
+/* Formulas Styling Valpy */
+.formulas{
+  background-color: #FFFFFF!important;
+}
+.card-header{
+  background-color: #009FE8;
+  color: #FFFFFF;
+}
+.card-header h1, h2{
+  margin: 0px!important;
+}
+.card-body{
+    padding: 20px!important;
+}
+.col {
+    word-wrap: break-word;
+    padding: 0px!important;
+}
+#formula-list a{
+  color: #F061A6;
+}
+#formula-list ul li i{
+  position:absolute;left:0;top:5px;
+  width:1.3em;height:1.3em;
+  line-height:1.3em;
+  text-align:center
+}
+div.scrollmenu {
+  background-color: #009FE8;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 6px;
+  }
+
+  div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  border: 1px solid #FFF;
+  background-color: #009FE8;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 8px;
+  }
+
+  div.scrollmenu a:hover {
+  background-color: #009FE8;
+  }
+
+  div.scrollmenu ::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+  .footer-list {
+    color: #fff;
+    padding-left: 5px;
+    list-style-type: none;
+  }
+  
+  .footer-list a:hover {
+    color: #fff;
+  }
+  ul li {
+    line-height: 1.7em
+    }
