@@ -3,7 +3,6 @@
  *
  * Copyright (c) 2020 Project Nayuki
  * All rights reserved. Contact Nayuki for licensing.
- * https://www.nayuki.io/page/chemical-equation-balancer-javascript
  */
 "use strict";
 /*---- Entry point functions from HTML GUI ----*/

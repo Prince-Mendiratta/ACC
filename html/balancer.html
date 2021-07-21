@@ -1,178 +1,185 @@
 <!DOCTYPE html>
 <html lang="en" class="fa-events-icons-ready">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <!-- HTML Defaults Broweser -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Bootstrap Stylesheet -->
-      <link rel="stylesheet" href="../css/bootstrap.min.css">
-      <!-- Favicon -->
-      <link rel="shortcut icon" href="../assets/img/chemistry calculator.ico" type="icon">
-      <!-- Project Style Sheet -->
-      <link rel="stylesheet" href="../css/balancer_style.css">
-      <!-- Meta Title, Description and Canonical URL Starts --->
-      <title>Chemical Equation Balancer</title>
-      <!-- Meta Title, Description and Canonical URL ENDS --->
-   </head>
-   <body>
-      <nav class="navbar fixed-top navbar-expand-sm">
-         <a class="navbar-brand" href="../index.html">ACC</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <i class="fa fa-bars"></i>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item">
-                  <a class="nav-link" href="./periodic.html">Periodic Table</a>
-               </li>
-            </ul>
-         </div>
-      </nav>
-      <div class="container" style="height: auto !important;">
-         <div class="card c1">
-            <div class="card-header">
-               <h1 class="h1">Chemical Equation Balancer</h1>
-            </div>
-            <div class="card-body">
-            </div>
-            <div class="d-flex justify-content-center">
-              <a id="top"></a>
-               <form onsubmit="event.preventDefault(); doBalance();">
-                  <strong>Enter the unbalanced Chemical Equation </strong>
-                  <div class="form-row align-items-center">
-                     <div class="col-auto">
-                        <div class="input-group mb-2 mt-3">
-                           <div class="input-group-prepend">
-                           </div>
-                           <input type="text" id="inputFormula" autocomplete="off" placeholder="Enter the unbalanced chemical formula here" class="form-control" name="eqwt">
-                        </div>
-                        <div class="input-group mb-2 mt-3">
-                           <div class="input-group-prepend">
-                           </div>
-                           <input type="text" readonly="" class="form-control" name="result" id="balanced" placeholder="Balanced Equation">
-                           <code hidden id="codeOutput">&#xA0;</code>
-                        </div>
-                     </div>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- HTML Defaults Broweser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/img/chemistry calculator.ico" type="icon">
+    <!-- Project Style Sheet -->
+    <link rel="stylesheet" href="../css/balancer_style.css">
+    <!-- Meta Title, Description and Canonical URL Starts --->
+    <title>Chemical Equation Balancer</title>
+    <!-- Meta Title, Description and Canonical URL ENDS --->
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-sm">
+      <a class="navbar-brand" href="../index.html">ACC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./periodic.html">Periodic Table</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="height: auto !important;">
+      <div class="card c1">
+        <div class="card-header">
+          <h1 class="h1">Chemical Equation Balancer</h1>
+        </div>
+        <div class="card-body">
+        </div>
+        <div class="d-flex justify-content-center">
+          <a id="top"></a>
+          <form onsubmit="event.preventDefault(); doBalance();">
+            <strong>Enter the unbalanced Chemical Equation </strong>
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <div class="input-group mb-2 mt-3">
+                  <div class="input-group-prepend">
                   </div>
-                  <div class=" center col mt-2 ">
-                     &nbsp;&nbsp;&nbsp;&nbsp;	
-                     <input id="botton1" class="btn btn-danger mb-2" type="button" onclick="myFunction()" value="Clear">
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <button type="submit" class="btn btn-primary mb-2">Calculate</button>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <button type="button" class="btn btn-secondary mb-2" onclick="doRandom();">Random</button>
+                  <input type="text" id="inputFormula" autocomplete="off" placeholder="Enter the unbalanced chemical formula here" class="form-control" name="eqwt">
+                </div>
+                <div class="input-group mb-2 mt-3">
+                  <div class="input-group-prepend">
                   </div>
-               </form>
+                  <input type="text" readonly="" class="form-control" name="result" id="balanced" placeholder="Balanced Equation">
+                  <code hidden id="codeOutput">&#xA0;</code>
+                </div>
+              </div>
             </div>
-            <ul class="messages">
-            </ul>
-         </div>
-         <div class="card">
-          <div class="card-header">
-                <h2 class="h2">Description</h2>
+            <div class=" center col mt-2 ">
+              &nbsp;&nbsp;&nbsp;&nbsp;	
+              <input id="botton1" class="btn btn-danger mb-2" type="button" onclick="myFunction()" value="Clear">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="submit" class="btn btn-primary mb-2">Calculate</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-secondary mb-2" onclick="doRandom();">Random</button>
             </div>
-          <div class="card-body">
-            <p>This is an easy-to-use, no-nonsense chemical equation balancer. The program calculates the coefficients to balance your given chemical equation. The algorithm used is Gauss-Jordan elimination, slightly modified to operate using only integer coefficients (not fractions). Because the program is entirely client-side JavaScript code, this web page can be saved and used offline.</p>
-            
-            <h2>Syntax guide</h2>
-            <br />
-            <form action="#" method="get" onsubmit="return false;">
-              <table id="syntax-guide">
-                <thead>
-                  <tr>
-                    <th>Feature &amp; demo</th>
-                    <th>Input</th>
-                    <th>Equation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('N = N2'); window.scrollTo(0, 0);">Subscripts</a></td>
-                    <td><code>N = N<strong>2</strong></code></td>
-                    <td>N<span class="rightarrow"> → </span>N<sub>2</sub></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('H2 + O2 = H2O'); window.scrollTo(0, 0);">Compounds</a></td>
-                    <td><code>H2 + O2 = <strong>H2O</strong></code></td>
-                    <td>H<sub>2</sub> + O<sub>2</sub><span class="rightarrow"> → </span>H<sub>2</sub>O</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('Mg(OH)2 = MgO + H2O'); window.scrollTo(0, 0);">Groups</a></td>
-                    <td><code>Mg<strong>(OH)</strong>2 = MgO + H2O</code></td>
-                    <td>Mg(OH)<sub>2</sub><span class="rightarrow"> → </span>MgO + H<sub>2</sub>O</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('H^+ + CO3^2- = H2O + CO2'); window.scrollTo(0, 0);">Ions</a></td>
-                    <td><code>H<strong>^+</strong> + CO3<strong>^2-</strong> = H2O + CO2</code></td>
-                    <td>H<sup>+</sup> + CO<sub>3</sub><sup>2−</sup><span class="rightarrow"> → </span>H<sub>2</sub>O + CO<sub>2</sub></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('Fe^3+ + e = Fe'); window.scrollTo(0, 0);">Electrons</a></td>
-                    <td><code>Fe^3+ + <strong>e</strong> = Fe</code></td>
-                    <td>Fe<sup>3+</sup> + e<sup>−</sup><span class="rightarrow"> → </span>Fe</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('A3^-+B2^2+=A5B+e'); window.scrollTo(0, 0);">No space</a></td>
-                    <td><code>A3^-+B2^2+=A5B+e</code></td>
-                    <td>A<sub>3</sub><sup>−</sup> + B<sub>2</sub><sup>2+</sup><span class="rightarrow"> → </span>A<sub>5</sub>B + e<sup>−</sup></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('C 3 H 5 ( O H ) 3 + O 2 = H 2 O + C O 2'); window.scrollTo(0, 0);">More space</a></td>
-                    <td><code>C 3 H 5 ( O H ) 3 + O 2 = H 2 O + C O 2</code></td>
-                    <td>C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub> + O<sub>2</sub><span class="rightarrow"> → </span>H<sub>2</sub>O + CO<sub>2</sub></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('H1^1+ + e = H1^1-'); window.scrollTo(0, 0);">Optional 1</a></td>
-                    <td><code>H<strong>1</strong>^<strong>1</strong>+ + e = H<strong>1</strong>^<strong>1</strong>-</code></td>
-                    <td>H<sup>+</sup> + e<sup>−</sup><span class="rightarrow"> → </span>H<sup>−</sup></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('Foo^5+ + Bar^3- = FooBar2 + FooBar^-'); window.scrollTo(0, 0);">Flexible names</a></td>
-                    <td><code><strong>Foo</strong>^5+ + <strong>Bar</strong>^3- = <strong>Foo</strong><strong>Bar</strong>2 + <strong>Foo</strong><strong>Bar</strong>^-</code></td>
-                    <td>Foo<sup>5+</sup> + Bar<sup>3−</sup><span class="rightarrow"> → </span>FooBar<sub>2</sub> + FooBar<sup>−</sup></td>
-                  </tr>
-                </tbody>
-              </table>
-            </form>
-            <br />
-            <h2>Error messages</h2>
-            <br />
-            <dl>
-              <dt>Syntax error</dt>
-              <dd><p>Your input does not describe a proper chemical equation. Check each letter carefully, and follow the examples as a guide to the correct syntax.</p></dd>
-              <dt>All-zero solution</dt>
-              <dd><p>The only mathematical solution to your equation has all coefficients set to zero, which is a trivial solution for every chemical equation. For example, C → N<sub>2</sub> has no solution because the only solution is 0C → 0N<sub>2</sub>.</p></dd>
-              <dt>Multiple independent solutions</dt>
-              <dd><p>There exist multiple solutions to your equation that are not simply multiples of each other. Your equation can be considered as two or more independent equations added together. For example, H + O → H<sub>2</sub> + O<sub>2</sub> has no unique solution because two solutions are 2H + 4O → H<sub>2</sub> + 2O<sub>2</sub> and 6H + 2O → 3H<sub>2</sub> + O<sub>2</sub>, which are not multiples of each other. Furthermore, the equation can be separated as H → H<sub>2</sub> and O → O<sub>2</sub>, each of which does have a unique solution.</p></dd>
-              <dt>Arithmetic overflow</dt>
-              <dd><p>Your equation used numbers that are too big, or a term has an element that occurs too many times, or the internal calculation used numbers that are too big. I don’t expect this error to occur for real-world chemical formulas, only deliberately contrived ones. There is no workaround; the code would need to be rewritten to use bigints.</p></dd>
-            </dl>
-            <p>Note: For simplicity of implementation, if the equation is successfully balanced but one or more terms have a negative coefficient, the program doesn’t consider this outcome to be an error condition. In this case, each term that has a negative coefficient should be put on the other side of the equation, and its new coefficient should be the absolute value of the negative coefficient.</p>            
-            </div>
+          </form>
+        </div>
+        <ul class="messages">
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2 class="h2">Description</h2>
+        </div>
+        <div class="card-body">
+          <p>This is an easy-to-use, no-nonsense chemical equation balancer. The program calculates the coefficients to balance your given chemical equation. The algorithm used is Gauss-Jordan elimination, slightly modified to operate using only integer coefficients (not fractions). Because the program is entirely client-side JavaScript code, this web page can be saved and used offline.</p>
+          <h2>Syntax guide</h2>
+          <br />
+          <form action="#" method="get" onsubmit="return false;">
+            <table id="syntax-guide">
+              <thead>
+                <tr>
+                  <th>Feature &amp; demo</th>
+                  <th>Input</th>
+                  <th>Equation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('N = N2'); window.scrollTo(0, 0);">Subscripts</a></td>
+                  <td><code>N = N<strong>2</strong></code></td>
+                  <td>N<span class="rightarrow"> → </span>N<sub>2</sub></td>
+                </tr>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('H2 + O2 = H2O'); window.scrollTo(0, 0);">Compounds</a></td>
+                  <td><code>H2 + O2 = <strong>H2O</strong></code></td>
+                  <td>H<sub>2</sub> + O<sub>2</sub><span class="rightarrow"> → </span>H<sub>2</sub>O</td>
+                </tr>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('Mg(OH)2 = MgO + H2O'); window.scrollTo(0, 0);">Groups</a></td>
+                  <td><code>Mg<strong>(OH)</strong>2 = MgO + H2O</code></td>
+                  <td>Mg(OH)<sub>2</sub><span class="rightarrow"> → </span>MgO + H<sub>2</sub>O</td>
+                </tr>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('H^+ + CO3^2- = H2O + CO2'); window.scrollTo(0, 0);">Ions</a></td>
+                  <td><code>H<strong>^+</strong> + CO3<strong>^2-</strong> = H2O + CO2</code></td>
+                  <td>H<sup>+</sup> + CO<sub>3</sub><sup>2−</sup><span class="rightarrow"> → </span>H<sub>2</sub>O + CO<sub>2</sub></td>
+                </tr>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('Fe^3+ + e = Fe'); window.scrollTo(0, 0);">Electrons</a></td>
+                  <td><code>Fe^3+ + <strong>e</strong> = Fe</code></td>
+                  <td>Fe<sup>3+</sup> + e<sup>−</sup><span class="rightarrow"> → </span>Fe</td>
+                </tr>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('A3^-+B2^2+=A5B+e'); window.scrollTo(0, 0);">No space</a></td>
+                  <td><code>A3^-+B2^2+=A5B+e</code></td>
+                  <td>A<sub>3</sub><sup>−</sup> + B<sub>2</sub><sup>2+</sup><span class="rightarrow"> → </span>A<sub>5</sub>B + e<sup>−</sup></td>
+                </tr>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('C 3 H 5 ( O H ) 3 + O 2 = H 2 O + C O 2'); window.scrollTo(0, 0);">More space</a></td>
+                  <td><code>C 3 H 5 ( O H ) 3 + O 2 = H 2 O + C O 2</code></td>
+                  <td>C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub> + O<sub>2</sub><span class="rightarrow"> → </span>H<sub>2</sub>O + CO<sub>2</sub></td>
+                </tr>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('H1^1+ + e = H1^1-'); window.scrollTo(0, 0);">Optional 1</a></td>
+                  <td><code>H<strong>1</strong>^<strong>1</strong>+ + e = H<strong>1</strong>^<strong>1</strong>-</code></td>
+                  <td>H<sup>+</sup> + e<sup>−</sup><span class="rightarrow"> → </span>H<sup>−</sup></td>
+                </tr>
+                <tr>
+                  <td><a href="#" title="Click to show demo" onclick="event.preventDefault(); doDemo('Foo^5+ + Bar^3- = FooBar2 + FooBar^-'); window.scrollTo(0, 0);">Flexible names</a></td>
+                  <td><code><strong>Foo</strong>^5+ + <strong>Bar</strong>^3- = <strong>Foo</strong><strong>Bar</strong>2 + <strong>Foo</strong><strong>Bar</strong>^-</code></td>
+                  <td>Foo<sup>5+</sup> + Bar<sup>3−</sup><span class="rightarrow"> → </span>FooBar<sub>2</sub> + FooBar<sup>−</sup></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+          <br />
+          <h2>Error messages</h2>
+          <br />
+          <dl>
+            <dt>Syntax error</dt>
+            <dd>
+              <p>Your input does not describe a proper chemical equation. Check each letter carefully, and follow the examples as a guide to the correct syntax.</p>
+            </dd>
+            <dt>All-zero solution</dt>
+            <dd>
+              <p>The only mathematical solution to your equation has all coefficients set to zero, which is a trivial solution for every chemical equation. For example, C → N<sub>2</sub> has no solution because the only solution is 0C → 0N<sub>2</sub>.</p>
+            </dd>
+            <dt>Multiple independent solutions</dt>
+            <dd>
+              <p>There exist multiple solutions to your equation that are not simply multiples of each other. Your equation can be considered as two or more independent equations added together. For example, H + O → H<sub>2</sub> + O<sub>2</sub> has no unique solution because two solutions are 2H + 4O → H<sub>2</sub> + 2O<sub>2</sub> and 6H + 2O → 3H<sub>2</sub> + O<sub>2</sub>, which are not multiples of each other. Furthermore, the equation can be separated as H → H<sub>2</sub> and O → O<sub>2</sub>, each of which does have a unique solution.</p>
+            </dd>
+            <dt>Arithmetic overflow</dt>
+            <dd>
+              <p>Your equation used numbers that are too big, or a term has an element that occurs too many times, or the internal calculation used numbers that are too big. I don’t expect this error to occur for real-world chemical formulas, only deliberately contrived ones. There is no workaround; the code would need to be rewritten to use bigints.</p>
+            </dd>
+          </dl>
+          <p>Note: For simplicity of implementation, if the equation is successfully balanced but one or more terms have a negative coefficient, the program doesn’t consider this outcome to be an error condition. In this case, each term that has a negative coefficient should be put on the other side of the equation, and its new coefficient should be the absolute value of the negative coefficient.</p>
         </div>
       </div>
-      <script>
-         function myFunction() {
-         	document.getElementsByName("eqwt")[0].value="";
-            document.getElementsByName("result")[0].value="";
-         }
-      </script>
-      <style>
-         .footer {
-         position: static;
-         left: 0;
-         bottom: 0;
-         width: 100%;
-         height: 80px;
-         background-color: #009FE8;
-         color: white;
-         text-align: center;
-         margin: 0%;
-         }
-      </style>
-      <div class="footer">
-        <strong>Enter the unbalanced Chemical Equation </strong>
-      </div>
-   </body>
-   <script src="../js/chemical-equation-balancer.js"></script>
+    </div>
+    <script>
+      function myFunction() {
+      	document.getElementsByName("eqwt")[0].value="";
+         document.getElementsByName("result")[0].value="";
+      }
+    </script>
+    <style>
+      .footer {
+      position: static;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #009FE8;
+      color: white;
+      text-align: center;
+      margin: 0%;
+      }
+    </style>
+    <div class="footer">
+      <strong>Copyright ACC @2021</strong>
+    </div>
+  </body>
+  <script src="../js/chemical-equation-balancer.js"></script>
 </html>
