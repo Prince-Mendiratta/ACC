@@ -1,10 +1,3 @@
-/*
- * Chemical equation balancer (compiled from TypeScript)
- *
- * Copyright (c) 2020 Project Nayuki
- * All rights reserved. Contact Nayuki for licensing.
- */
-"use strict";
 /*---- Entry point functions from HTML GUI ----*/
 var formulaElem = document.getElementById("inputFormula");
 // Balances the given formula string and sets the HTML output on the page. Returns nothing.
