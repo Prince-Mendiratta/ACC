@@ -387,12 +387,6 @@ ul, .ul-format {
     color: white;
   }
 
-.footer {
-      background-color: #009FE8;
-      flex-shrink: 0;
-      color: white;
-      width: 100% !important;
-  }
 
 /* Formulas Styling Valpy */
 .formulas{
@@ -407,6 +401,9 @@ ul, .ul-format {
 }
 .card-body{
     padding: 20px!important;
+}
+html {
+  margin: 0;
 }
 .col {
     word-wrap: break-word;
